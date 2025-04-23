@@ -1,4 +1,4 @@
-# Streamer-Sales 销冠 —— 卖货主播大模型
+# Streamer-Sales - Mô hình Nhân viên bán hàng trực tuyến AI
 
 <br />
 <!-- PROJECT LOGO -->
@@ -11,121 +11,121 @@
 <h3 align="center">Streamer-Sales</h3>
   <p align="center">
     <br />
-    <a href="https://openxlab.org.cn/apps/detail/HinGwenWong/Streamer-Sales">查看Demo</a>
+    <a href="https://openxlab.org.cn/apps/detail/HinGwenWong/Streamer-Sales">Xem Demo</a>
     ·
-    <a href="https://github.com/PeterH0323/Streamer-Sales/issues">报告Bug & 提出新特性</a>
+    <a href="https://github.com/PeterH0323/Streamer-Sales/issues">Báo cáo lỗi & Đề xuất tính năng mới</a>
   </p>
 </p>
 
-## 📢 介绍
+## 📢 Giới thiệu
 
-**Streamer-Sales 销冠 —— 卖货主播大模型** 是一个能够根据给定的商品特点从激发用户购买意愿角度出发进行商品解说的卖货主播大模型。以其独特的智能魅力，将彻底改变您的购物体验。该模型能深度理解商品特点，以生动、精准的语言为商品量身打造解说词，让每一件商品都焕发出诱人的光彩。无论是细节之处，还是整体效果，都能通过其细腻、独到的解说，激发用户的购买欲望。
+**Streamer-Sales - Mô hình Nhân viên bán hàng trực tuyến AI** là một mô hình lớn có khả năng giới thiệu sản phẩm dựa trên đặc điểm của sản phẩm đó, với mục đích kích thích nhu cầu mua hàng của người dùng. Với sức mạnh trí tuệ độc đáo, mô hình này sẽ hoàn toàn thay đổi trải nghiệm mua sắm của bạn. Mô hình có thể hiểu sâu về đặc điểm sản phẩm, tạo ra nội dung giới thiệu chính xác và sống động cho từng sản phẩm, giúp mọi sản phẩm trở nên hấp dẫn hơn. Từ các chi tiết nhỏ đến hiệu quả tổng thể, thông qua cách giải thích tinh tế và độc đáo, mô hình có thể kích thích mong muốn mua hàng của người dùng.
 
-模型用 [xtuner](https://github.com/InternLM/xtuner) 在 [InternLM2](https://github.com/InternLM/InternLM) 的基础上指令微调而来，部署集成了 LMDeploy **加速推理**🚀，支持 **ASR 语音生成文字** 🎙️，支持 **RAG 检索增强生成**📚 做到可以随时更新说明书指导主播生成文案，支持 **Agent 通过网络查询快递信息** 🌐，还加入带有感情的 **TTS 文字转语音**🔊 生成，最后还会**生成主播数字人视频**🦸，让主播不止于文字介绍。
+Mô hình được tinh chỉnh từ [InternLM2](https://github.com/InternLM/InternLM) bằng [xtuner](https://github.com/InternLM/xtuner), tích hợp LMDeploy để **tăng tốc suy luận**🚀, hỗ trợ **ASR chuyển đổi giọng nói thành văn bản** 🎙️, hỗ trợ **RAG tăng cường truy xuất** 📚 để cập nhật hướng dẫn sử dụng và giúp nhân viên bán hàng tạo nội dung, hỗ trợ **Agent truy vấn thông tin chuyển phát nhanh qua mạng** 🌐, tích hợp **TTS chuyển văn bản thành giọng nói** 🔊 với cảm xúc, và cuối cùng là tạo ra **video nhân viên bán hàng kỹ thuật số** 🦸, giúp nhân viên bán hàng không chỉ giới thiệu bằng văn bản.
 
-**功能点总结：**
+**Tóm tắt tính năng:**
 
-1. 📜 **主播文案一键生成**
-2. 🚀 KV cache + Turbomind **推理加速**
-3. 📚 RAG **检索增强生成**
-4. 🔊 TTS **文字转语音**
-5. 🦸 **数字人生成**
-6. 🌐 **Agent 网络查询**
-7. 🎙️ **ASR 语音转文字**
-8. 🍍 **Vue + pinia + element-plus** 搭建前端，可自由扩展快速开发
-9. 🗝️ 后端采用 **FastAPI + Uvicorn + PostgreSQL，高性能，高效编码，生产可用，具有 JWT 身份验证**，接口均采用 RESTful API 规范编写，更规范
-10. 🐋 采用 Docker-compose 部署，**一键实现分布式部署**
+1. 📜 **Tạo nội dung bán hàng với một cú nhấp chuột**
+2. 🚀 KV cache + Turbomind **tăng tốc suy luận**
+3. 📚 RAG **tăng cường truy xuất**
+4. 🔊 TTS **chuyển văn bản thành giọng nói**
+5. 🦸 **Tạo nhân vật kỹ thuật số**
+6. 🌐 **Agent truy vấn thông tin qua mạng**
+7. 🎙️ **ASR chuyển đổi giọng nói thành văn bản**
+8. 🍍 **Vue + pinia + element-plus** xây dựng giao diện người dùng, dễ dàng mở rộng và phát triển nhanh
+9. 🗝️ Backend sử dụng **FastAPI + Uvicorn + PostgreSQL, hiệu suất cao, hiệu quả, sẵn sàng cho sản xuất, xác thực JWT**, API tuân theo tiêu chuẩn RESTful
+10. 🐋 Sử dụng Docker-compose để triển khai, **triển khai phân tán với một lệnh**
 
-无论是线上直播销售，还是线下门店推广，这款卖货主播大模型都能成为您不可或缺的得力助手。它不仅能够提升销售效率，还能增强用户体验，为您的品牌形象加分。
+Dù là bán hàng trực tuyến hay quảng bá tại cửa hàng, mô hình nhân viên bán hàng AI này sẽ trở thành trợ thủ đắc lực không thể thiếu. Nó không chỉ nâng cao hiệu quả bán hàng mà còn cải thiện trải nghiệm người dùng, tăng cường hình ảnh thương hiệu của bạn.
 
-后续会在该模型的基础上新增根据用户的反馈和行为，实时调整解说策略，确保每一次互动都能带来最佳的购物效果。
+Trong tương lai, chúng tôi sẽ bổ sung khả năng điều chỉnh chiến lược giới thiệu theo phản hồi và hành vi của người dùng theo thời gian thực, đảm bảo mỗi tương tác mang lại trải nghiệm mua sắm tốt nhất.
 
-让我们的卖货主播大模型成为您销售路上的得力助手，共同开创更美好的商业未来。
+Hãy để mô hình nhân viên bán hàng AI của chúng tôi trở thành trợ thủ đắc lực trên con đường bán hàng của bạn, cùng nhau mở ra tương lai kinh doanh tốt đẹp hơn.
 
-**开源不易，如果本项目帮到大家，可以右上角帮我点个 star~ ⭐⭐ , 您的 star ⭐ 是我们最大的鼓励，谢谢各位！**
+**Việc phát triển mã nguồn mở không hề dễ dàng, nếu dự án này giúp ích cho bạn, hãy nhấn star ở góc trên bên phải nhé~ ⭐⭐, star ⭐ của bạn là động lực lớn nhất của chúng tôi, cảm ơn mọi người!**
 
-## 🎉 NEWS
+## 🎉 TIN TỨC
 
-- [2024.09.13] 使用 **RESTful API** 规范重构所有接口，后端**全面接入 [PostgreSQL](https://www.postgresql.org/) 数据库**
-- [2024.09.02] 💥💥💥**重磅发布：【 AI 卖货主播后台系统 】** ❗❗❗： **前端使用 Vue 重写，后端使用 FastAPI 进一步扩充接口**，更加贴近生产，功能添加更为自由灵活，详见[架构图](#-架构图)
-- [2024.07.23] **支持 Docker-Compose 一键部署**，再也不用担心环境问题，服务可以自由编排，一键部署更加丝滑！
-- [2024.07.10] **前后端分离**，可以定义服务数量做到负载均衡啦！
-- [2024.06.17] **支持 ASR**，可以语音输入和主播互动啦！
-- [2024.06.16] **接入 Agent**，可以询问主播关于快递的信息，会调用 Agent 能力进行**网上查询**
-- [2024.06.10] **重磅发布 数字人 1.0** 🦸🦸🦸 ，同时开源 **ComfyUI Workflow** ！详见 [ComfyUI 数字人生成](./doc/digital_human/README.md) 文档
-- [2024.05.28] **项目介绍视频发布**：[B 站](https://www.bilibili.com/video/BV1ZJ4m1w75P)
-- [2024.05.25] 发布 **TTS 2.0** 版本，**生成的语音在语气和情感方面有大大增强！**
-- [2024.05.23] 发布 TTS 1.0 版本，并支持开放用户自由选择该项功能，但有机器人的感觉
-- [2024.05.22] **支持上传新商品**，上传后会自动生成数据库
-- [2024.05.21] **接入 RAG 检索增强**，主播每次回答问题都会借鉴说明书，**实现加商品无需微调即可让回答更加贴近商品实际**
-- [2024.05.19] 新增说明书生成脚本，可以根据网页图片快速生成说明书，具体逻辑：Web 图片 -> OCR -> LLM -> 说明书
-- [2024.05.15] 接入 [LMDeploy](https://github.com/InternLM/lmdeploy)，**推理效率提升 3 倍+** 🚀🚀🚀
-- [2024.05.10] 发布【乐乐喵】4 bit 模型
-- [2024.04.16] 发布【乐乐喵】模型，完成初版页面
-- [2024.04.06] 生成数据初版完成，训练初版模型
+- [2024.09.13] Tái cấu trúc tất cả các API sử dụng tiêu chuẩn **RESTful API**, backend **tích hợp hoàn toàn với cơ sở dữ liệu [PostgreSQL](https://www.postgresql.org/)**
+- [2024.09.02] 💥💥💥**Ra mắt quan trọng: 【Hệ thống quản lý nhân viên bán hàng AI】** ❗❗❗: **Frontend được viết lại bằng Vue, backend mở rộng API với FastAPI**, gần với môi trường sản xuất hơn, thêm tính năng linh hoạt, xem chi tiết tại [sơ đồ kiến trúc](#-sơ-đồ-kiến-trúc)
+- [2024.07.23] **Hỗ trợ triển khai một lệnh với Docker-Compose**, không còn lo lắng về vấn đề môi trường, dịch vụ có thể điều chỉnh tự do, triển khai một lệnh mượt mà hơn!
+- [2024.07.10] **Tách frontend và backend**, có thể định nghĩa số lượng dịch vụ để cân bằng tải!
+- [2024.06.17] **Hỗ trợ ASR**, có thể nhập giọng nói để tương tác với nhân viên bán hàng!
+- [2024.06.16] **Tích hợp Agent**, có thể hỏi nhân viên bán hàng về thông tin chuyển phát nhanh, sẽ sử dụng khả năng Agent để **truy vấn trực tuyến**
+- [2024.06.10] **Ra mắt quan trọng Nhân vật kỹ thuật số 1.0** 🦸🦸🦸, đồng thời phát hành **ComfyUI Workflow**! Xem chi tiết tại tài liệu [Tạo nhân vật kỹ thuật số ComfyUI](./doc/digital_human/README.md)
+- [2024.05.28] **Video giới thiệu dự án ra mắt**: [Bilibili](https://www.bilibili.com/video/BV1ZJ4m1w75P)
+- [2024.05.25] Ra mắt phiên bản **TTS 2.0**, **giọng nói được tạo ra có cải thiện đáng kể về ngữ điệu và cảm xúc!**
+- [2024.05.23] Ra mắt phiên bản TTS 1.0, cho phép người dùng tự do lựa chọn tính năng này, nhưng có cảm giác robot
+- [2024.05.22] **Hỗ trợ tải lên sản phẩm mới**, sau khi tải lên sẽ tự động tạo cơ sở dữ liệu
+- [2024.05.21] **Tích hợp RAG tăng cường truy xuất**, nhân viên bán hàng sẽ tham khảo hướng dẫn sử dụng mỗi khi trả lời câu hỏi, **cho phép thêm sản phẩm mà không cần tinh chỉnh vẫn có câu trả lời phù hợp với sản phẩm thực tế**
+- [2024.05.19] Thêm script tạo hướng dẫn sử dụng, có thể nhanh chóng tạo hướng dẫn sử dụng từ hình ảnh trên web, logic cụ thể: Hình ảnh web -> OCR -> LLM -> Hướng dẫn sử dụng
+- [2024.05.15] Tích hợp [LMDeploy](https://github.com/InternLM/lmdeploy), **hiệu suất suy luận tăng hơn 3 lần** 🚀🚀🚀
+- [2024.05.10] Ra mắt mô hình 【Lele Miao】 4 bit
+- [2024.04.16] Ra mắt mô hình 【Lele Miao】, hoàn thành phiên bản trang đầu tiên
+- [2024.04.06] Hoàn thành phiên bản đầu tiên của bộ dữ liệu, đào tạo mô hình phiên bản đầu tiên
 
-## 📌 目录
+## 📌 Mục lục
 
-- [Streamer-Sales 销冠 —— 卖货主播大模型](#streamer-sales-销冠--卖货主播大模型)
-  - [📢 介绍](#-介绍)
-  - [🎉 NEWS](#-news)
-  - [📌 目录](#-目录)
-  - [🛠 架构图](#-架构图)
-  - [📺️ 讲解视频](#️-讲解视频)
-  - [📰 媒体转载](#-媒体转载)
-  - [🏆 获奖信息](#-获奖信息)
-  - [🖼 项目展示](#-项目展示)
-  - [⚙ Model Zoo](#-model-zoo)
-  - [🎨 快速体验](#-快速体验)
-    - [在线体验](#在线体验)
-    - [本地部署](#本地部署)
-      - [方式一：Docker-Compose（推荐）](#方式一docker-compose推荐)
-      - [方式二：宿主机直接部署](#方式二宿主机直接部署)
-  - [🖥️ 配置需求](#️-配置需求)
-  - [🦸 数字人生成 Workflow](#-数字人生成-workflow)
+- [Streamer-Sales - Mô hình Nhân viên bán hàng trực tuyến AI](#streamer-sales---mô-hình-nhân-viên-bán-hàng-trực-tuyến-ai)
+  - [📢 Giới thiệu](#-giới-thiệu)
+  - [🎉 TIN TỨC](#-tin-tức)
+  - [📌 Mục lục](#-mục-lục)
+  - [🛠 Sơ đồ kiến trúc](#-sơ-đồ-kiến-trúc)
+  - [📺️ Video giới thiệu](#️-video-giới-thiệu)
+  - [📰 Bài viết trên truyền thông](#-bài-viết-trên-truyền-thông)
+  - [🏆 Giải thưởng](#-giải-thưởng)
+  - [🖼 Trình diễn dự án](#-trình-diễn-dự-án)
+  - [⚙ Kho mô hình](#-kho-mô-hình)
+  - [🎨 Trải nghiệm nhanh](#-trải-nghiệm-nhanh)
+    - [Trải nghiệm trực tuyến](#trải-nghiệm-trực-tuyến)
+    - [Triển khai cục bộ](#triển-khai-cục-bộ)
+      - [Cách 1: Docker-Compose (Khuyên dùng)](#cách-1docker-compose-khuyên-dùng)
+      - [Cách 2: Triển khai trực tiếp trên máy chủ](#cách-2triển-khai-trực-tiếp-trên-máy-chủ)
+  - [🖥️ Yêu cầu cấu hình](#️-yêu-cầu-cấu-hình)
+  - [🦸 Workflow tạo nhân vật kỹ thuật số](#-workflow-tạo-nhân-vật-kỹ-thuật-số)
   - [🌐 Agent](#-agent)
-  - [🧱 开发计划](#-开发计划)
-  - [🧭 详细指南](#-详细指南)
-    - [一、环境搭建](#一环境搭建)
-    - [二、微调数据集准备](#二微调数据集准备)
-    - [三、训练](#三训练)
-    - [四、说明书生成](#四说明书生成)
-    - [五、RAG 向量数据库](#五rag-向量数据库)
-    - [六、模型合并 + 量化](#六模型合并--量化)
-    - [七、启动 Web APP](#七启动-web-app)
-      - [方式一：Docker-Compose（推荐）](#方式一docker-compose推荐-1)
-      - [方式二：宿主机直接部署](#方式二宿主机直接部署-1)
-  - [📧 后记](#-后记)
-  - [💳 赞助](#-赞助)
-  - [💕 致谢](#-致谢)
-  - [🎫 开源许可证](#-开源许可证)
-  - [🧾 免责声明](#-免责声明)
-  - [🔗 引用](#-引用)
-  - [🌟 Star History](#-star-history)
+  - [🧱 Kế hoạch phát triển](#-kế-hoạch-phát-triển)
+  - [🧭 Hướng dẫn chi tiết](#-hướng-dẫn-chi-tiết)
+    - [I. Thiết lập môi trường](#i-thiết-lập-môi-trường)
+    - [II. Chuẩn bị dữ liệu tinh chỉnh](#ii-chuẩn-bị-dữ-liệu-tinh-chỉnh)
+    - [III. Đào tạo](#iii-đào-tạo)
+    - [IV. Tạo hướng dẫn sử dụng](#iv-tạo-hướng-dẫn-sử-dụng)
+    - [V. Cơ sở dữ liệu vector RAG](#v-cơ-sở-dữ-liệu-vector-rag)
+    - [VI. Kết hợp mô hình + Lượng tử hóa](#vi-kết-hợp-mô-hình--lượng-tử-hóa)
+    - [VII. Khởi chạy Web APP](#vii-khởi-chạy-web-app)
+      - [Cách 1: Docker-Compose (Khuyên dùng)](#cách-1docker-compose-khuyên-dùng-1)
+      - [Cách 2: Triển khai trực tiếp trên máy chủ](#cách-2triển-khai-trực-tiếp-trên-máy-chủ-1)
+  - [📧 Lời cuối](#-lời-cuối)
+  - [💳 Tài trợ](#-tài-trợ)
+  - [💕 Cảm ơn](#-cảm-ơn)
+  - [🎫 Giấy phép mã nguồn mở](#-giấy-phép-mã-nguồn-mở)
+  - [🧾 Tuyên bố miễn trừ trách nhiệm](#-tuyên-bố-miễn-trừ-trách-nhiệm)
+  - [🔗 Tham khảo](#-tham-khảo)
+  - [🌟 Lịch sử Star](#-lịch-sử-star)
 
-## 🛠 架构图
+## 🛠 Sơ đồ kiến trúc
 
-![架构图](./doc/doc_images/architecture.png)
+![Sơ đồ kiến trúc](./doc/doc_images/architecture.png)
 
-## 📺️ 讲解视频
+## 📺️ Video giới thiệu
 
-干货满满，欢迎一键三连（疯狂暗示 🍺）
+Nội dung phong phú, hãy nhấn like và chia sẻ (nhắc nhở 🍺)
 
-|       |                                                               标题                                                                |                                                                                                                                                                                                                  视频                                                                                                                                                                                                                  |
-| :---: | :-------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|   🌟   | [爆肝 1 个月，我做了个【AI 卖货主播大模型】，文案+语音+本地部署一键启动！干货满满！](https://www.bilibili.com/video/BV1ZJ4m1w75P) | [![Link](https://i0.hdslb.com/bfs/archive/bfbbc6158ffb5ca4b03738cd8bd25524ecf16336.jpg@320w_200h_1c_!web-space-index-myvideo.webp)](https://www.bilibili.com/video/BV1ZJ4m1w75P) [![bilibili](https://img.shields.io/badge/dynamic/json?label=views&style=social&logo=bilibili&query=data.stat.view&url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1ZJ4m1w75P)](https://www.bilibili.com/video/BV1ZJ4m1w75P) |
+|       |                                                                   Tiêu đề                                                                   |                                                                                                                                                                                                                  Video                                                                                                                                                                                                                  |
+| :---: | :-----------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|   🌟   | [Thức trắng 1 tháng, tôi đã làm ra 【Mô hình nhân viên bán hàng AI】, nội dung+giọng nói+triển khai cục bộ chỉ với một cú nhấp chuột! Đầy đủ tính năng!](https://www.bilibili.com/video/BV1ZJ4m1w75P) | [![Link](https://i0.hdslb.com/bfs/archive/bfbbc6158ffb5ca4b03738cd8bd25524ecf16336.jpg@320w_200h_1c_!web-space-index-myvideo.webp)](https://www.bilibili.com/video/BV1ZJ4m1w75P) [![bilibili](https://img.shields.io/badge/dynamic/json?label=views&style=social&logo=bilibili&query=data.stat.view&url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Fweb-interface%2Fview%3Fbvid%3DBV1ZJ4m1w75P)](https://www.bilibili.com/video/BV1ZJ4m1w75P) |
 
-## 📰 媒体转载
+## 📰 Bài viết trên truyền thông
 
 <p align="center">
   <img src="doc/doc_images/media_cited.gif" alt="media cited gif" width="80%">
 </p>
 
-## 🏆 获奖信息
+## 🏆 Giải thưởng
 
-- [2024 浦源大模型挑战赛（夏季赛）](https://www.shlab.org.cn/event/detail/59) - **创新创意赛道 TOP 1** 🥇
+- [Cuộc thi mô hình lớn Puyuan 2024 (Mùa hè)](https://www.shlab.org.cn/event/detail/59) - **Hạng nhất đường đua Sáng tạo & Đổi mới** 🥇
 
-## 🖼 项目展示
+## 🖼 Trình diễn dự án
 
 <p align="center">
   <img src="doc/doc_images/admin-demo_gif.gif" alt="Demo gif" width="65%">
@@ -150,7 +150,7 @@
 
 ---
 
-下面是 v0.8.0 的演示图：
+Dưới đây là hình ảnh minh họa của phiên bản v0.8.0:
 
 <p align="center">
   <img src="doc/doc_images/demo_gif.gif" alt="Demo gif" >
@@ -158,24 +158,24 @@
 
 ## ⚙ Model Zoo
 
-| 模型                            | 基座             | 数据量           | ModelScope(HF)                                                                          | OpenXLab(HF)                                                                                                                                                            |
-| ------------------------------- | ---------------- | ---------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| streamer-sales-lelemiao-7b      | interlm2-chat-7b | about 40w Toeken | [ModelScope](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b)      | [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/HinGwenWong/streamer-sales-lelemiao--7b/)    |
-| streamer-sales-lelemiao-7b-4bit | interlm2-chat-7b | about 40w Toeken | [ModelScope](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b-4bit) | [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/HinGwenWong/streamer-sales-lelemiao-7b-4bit) |
+| Mô hình                         | Mô hình cơ sở      | Kích thước dữ liệu | ModelScope(HF)                                                                          | OpenXLab(HF)                                                                                                                                                            |
+| ------------------------------- | ------------------ | ------------------ | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| streamer-sales-lelemiao-7b      | interlm2-chat-7b   | khoảng 40w Token  | [ModelScope](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b)      | [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/HinGwenWong/streamer-sales-lelemiao--7b/)    |
+| streamer-sales-lelemiao-7b-4bit | interlm2-chat-7b   | khoảng 40w Token  | [ModelScope](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b-4bit) | [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/HinGwenWong/streamer-sales-lelemiao-7b-4bit) |
 
-## 🎨 快速体验
+## 🎨 Trải nghiệm nhanh
 
-### 在线体验
+### Trải nghiệm trực tuyến
 
-目前已将 `v0.7.1` 版本部署到 OpenXLab 平台，地址 ：<https://openxlab.org.cn/apps/detail/HinGwenWong/Streamer-Sales>
+Hiện tại phiên bản `v0.7.1` đã được triển khai trên nền tảng OpenXLab, địa chỉ: <https://openxlab.org.cn/apps/detail/HinGwenWong/Streamer-Sales>
 
-因为 Agent API 需要计费的关系和显存大小的关系，上面失能了 Agent 和 ASR，但项目本身是支持的，可以自行购买 API 服务和本地部署来体验。
+Do yêu cầu thanh toán phí API và giới hạn bộ nhớ VRAM, Agent và ASR đã bị vô hiệu hóa, nhưng dự án vẫn hỗ trợ các tính năng này, bạn có thể mua dịch vụ API và triển khai cục bộ để trải nghiệm đầy đủ.
 
-### 本地部署
+### Triển khai cục bộ
 
-#### 方式一：Docker-Compose（推荐）
+#### Cách 1: Docker-Compose (Khuyên dùng)
 
-目前只支持后端，后续会加入前端
+Hiện tại chỉ hỗ trợ backend, frontend sẽ được thêm vào sau
 
 ```bash
 git clone https://github.com/PeterH0323/Streamer-Sales.git
@@ -186,16 +186,16 @@ docker build -t streamer-sales:v0.10.0 -f docker/Dockerfile .
 docker-compose up
 ```
 
-> [!NOTE]
-> 如果出现错误：
+> [!LƯU Ý]
+> Nếu gặp lỗi:
 >
-> 1、第一次启动需要下载模型，有可能会出现服务之间 connect fail，耐心等待下载好模型重启即可
+> 1. Lần đầu khởi động cần tải mô hình, có thể xảy ra lỗi connect fail giữa các dịch vụ, hãy kiên nhẫn đợi tải xong mô hình và khởi động lại
 >
-> 2、如果您有多卡，可以修改 compose.yaml 中的 `device_ids` 来配置每个服务部署的显卡 ID
+> 2. Nếu bạn có nhiều GPU, có thể chỉnh sửa `device_ids` trong compose.yaml để cấu hình ID GPU cho từng dịch vụ
 
-#### 方式二：宿主机直接部署
+#### Cách 2: Triển khai trực tiếp trên máy chủ
 
-- 环境搭建：
+- Thiết lập môi trường:
 
 ```bash
 git clone https://github.com/PeterH0323/Streamer-Sales.git
@@ -206,67 +206,67 @@ pip install -r requirements.txt
 
 ```
 
-**注意**：如果您发现下载权重经常 timeout ，参考 [权重文件结构](./weights/README.md) 文档，文档内已有超链接可访问源模型路径，可进行自行下载
+**Lưu ý**: Nếu bạn thấy việc tải các file trọng số thường xuyên bị timeout, hãy tham khảo tài liệu [Cấu trúc file trọng số](./weights/README.md), trong đó có các liên kết để truy cập đường dẫn mô hình gốc để bạn có thể tự tải xuống
 
-启动分为两种方式：
+Có hai cách khởi động:
 
 <details close>
-<summary><b>前后端分离版本 ( > v0.7.1 )</b>：适合分布式部署，可以配置负载均衡，更适合生产环境。</summary>
+<summary><b>Phiên bản tách Frontend-Backend ( > v0.7.1 )</b>: Phù hợp cho triển khai phân tán, có thể cấu hình cân bằng tải, phù hợp hơn cho môi trường sản xuất.</summary>
 
-**注意**：每个服务都要用一个 terminal 去启动
+**Lưu ý**: Mỗi dịch vụ cần một terminal riêng để khởi động
 
-1. TTS 服务
+1. Dịch vụ TTS
 
 ```bash
 bash deploy.sh tts
 ```
 
-2. 数字人 服务
+2. Dịch vụ nhân vật kỹ thuật số
 
 ```bash
 bash deploy.sh dg
 ```
 
-3. ASR 服务
+3. Dịch vụ ASR
 
 ```bash
 bash deploy.sh asr
 ```
 
-4. LLM 服务
+4. Dịch vụ LLM
 
 ```bash
 bash deploy.sh llm
 ```
 
-默认使用 [lelemiao-7b](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b) 进行部署，建议使用 40G 显存机器。
+Mặc định sử dụng [lelemiao-7b](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b) để triển khai, khuyến nghị sử dụng máy có 40G VRAM.
 
-如果您的机器是 24G 的显卡，需要换成 4bit 模型，命令如下：
+Nếu máy của bạn có GPU 24G, bạn cần chuyển sang mô hình 4bit, sử dụng lệnh:
 
 ```bash
 bash deploy.sh llm-4bit
 ```
 
-5. 中台服务
+5. Dịch vụ trung tâm
 
-启用中台服务需要先配置数据库环境，详见 [数据库环境搭建](./doc/database/README.md)
+Để kích hoạt dịch vụ trung tâm, bạn cần cấu hình môi trường cơ sở dữ liệu trước, xem chi tiết tại [Thiết lập môi trường cơ sở dữ liệu](./doc/database/README.md)
 
 ```bash
-# Agent Key (如果没有请忽略)
-export DELIVERY_TIME_API_KEY="${快递 EBusinessID},${快递 api_key}"
-export WEATHER_API_KEY="${天气 API key}"
+# Agent Key (bỏ qua nếu không có)
+export DELIVERY_TIME_API_KEY="${EBusinessID chuyển phát nhanh},${api_key chuyển phát nhanh}"
+export WEATHER_API_KEY="${API key thời tiết}"
 
-# 数据库配置
-# export POSTGRES_SERVER="127.0.0.1"  # 数据库 IP，按需配置
-export POSTGRES_PASSWORD=""  # 数据库密码，自行填写
-# export POSTGRES_DB="streamer_sales_db"  # 数据库名字，按需配置
+# Cấu hình cơ sở dữ liệu
+# export POSTGRES_SERVER="127.0.0.1"  # IP cơ sở dữ liệu, cấu hình theo nhu cầu
+export POSTGRES_PASSWORD=""  # Mật khẩu cơ sở dữ liệu, tự điền
+# export POSTGRES_DB="streamer_sales_db"  # Tên cơ sở dữ liệu, cấu hình theo nhu cầu
 
 bash deploy.sh base
 ```
 
-6. 前端
+6. Frontend
 
-需要先搭建前端的环境，详见 [搭建前端环境文档](./doc/frontend/README.md)
+Cần thiết lập môi trường frontend trước, xem chi tiết tại [Tài liệu thiết lập môi trường frontend](./doc/frontend/README.md)
 
 ```bash
 bash deploy.sh frontend
@@ -275,83 +275,82 @@ bash deploy.sh frontend
 </details>
 
 <details close>
-<summary><b>前后端融合版本 ( <= v0.7.1 )</b>：适合初学者或者只是想部署玩玩的用户</summary>
+<summary><b>Phiên bản tích hợp Frontend-Backend ( <= v0.7.1 )</b>: Phù hợp cho người mới học hoặc chỉ muốn thử nghiệm</summary>
 
 ```bash
 git checkout v0.7.1
 
-# Agent Key (如果没有请忽略)
-export DELIVERY_TIME_API_KEY="${快递 EBusinessID},${快递 api_key}"
-export WEATHER_API_KEY="${天气 API key}"
+# Agent Key (bỏ qua nếu không có)
+export DELIVERY_TIME_API_KEY="${EBusinessID chuyển phát nhanh},${api_key chuyển phát nhanh}"
+export WEATHER_API_KEY="${API key thời tiết}"
 
 streamlit run app.py --server.address=0.0.0.0 --server.port 7860
 ```
 
 </details>
 
+## 🖥️ Yêu cầu cấu hình
 
-## 🖥️ 配置需求
+1. Cấu hình máy phát triển của tôi:
 
-1. 我的开发机器配置：
+|     Thành phần     |                   Mẫu/Phiên bản                  |
+| :----------------: | :----------------------------------------------: |
+|        CPU         | Intel(R) Xeon(R) Platinum 8369B CPU @ 2.90GHz    |
+|         RAM        |              128G, tối thiểu 64G                 |
+|      Ổ cứng        |                   500G SSD                       |
+|        GPU         |   A100, hoặc RTX4090, RTX3090 cũng có thể dùng   |
+|    Hệ điều hành    |              Ubuntu 20.04.6 LTS                  |
+|        CUDA        |                     12.2                         |
+|   Driver GPU       |                   535.54.03                      |
+|       Python       |                     3.10                         |
+|       conda        |       23.9.0, phiên bản conda không cần giống hệt|
+|       docker       |                    24.0.7                        |
+|   docker-compose   |                    1.29.0                        |
 
-|     组件名     |                   型号/版本                   |
-| :------------: | :-------------------------------------------: |
-|      CPU       | Intel(R) Xeon(R) Platinum 8369B CPU @ 2.90GHz |
-|      内存      |              128G，最小需要 64G               |
-|      磁盘      |                   500G SSD                    |
-|      显卡      |    A100，当然 RTX4090、RTX3090 也是可以的     |
-|      系统      |              Ubuntu 20.04.6 LTS               |
-|      CUDA      |                     12.2                      |
-|    显卡驱动    |                   535.54.03                   |
-|     Python     |                     3.10                      |
-|     conda      |       23.9.0，conda 版本不需要完全一样        |
-|     docker     |                    24.0.7                     |
-| docker-compose |                    1.29.0                     |
+2. VRAM cho tinh chỉnh
 
-2. 微调显存
+Cần VRAM 24G ~ 80G
 
-需要显存 24G ~ 80G
+| batch size | VRAM  |
+| ---------- | ----- |
+| 2          | 20G   |
+| 8          | 40G   |
+| 16         | 80G   |
 
-| batch size | 显存 |
-| ---------- | ---- |
-| 2          | 20G  |
-| 8          | 40G  |
-| 16         | 80G  |
+3. Bảng sử dụng VRAM của các dịch vụ
 
-3. 服务部署显存占用一览表
+|                                              Tên dịch vụ                                             |                  VRAM                  |
+| :--------------------------------------------------------------------------------------------------: | :------------------------------------: |
+|                                                  TTS                                                  |             2G (1668MB)                |
+|                                            Nhân vật kỹ thuật số                                       |             5G (4734MB)                |
+|                                                  ASR                                                  |            5.5G (5562MB)               |
+|                                                  RAG                                                  |             2G (1974MB)                |
+|      LLM - [lelemiao-7b](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b)        | 16G (16060MB)</br> Khuyến nghị GPU 40G |
+| LLM - [lelemiao-7b-4bit](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b-4bit)   | 6.5G (6406MB)</br> Phù hợp với GPU 24G |
 
-|                                              服务名称                                               |                  显存                  |
-| :-------------------------------------------------------------------------------------------------: | :------------------------------------: |
-|                                                 TTS                                                 |             2G （1668MB）              |
-|                                               数字人                                                |             5G （4734MB）              |
-|                                                 ASR                                                 |            5.5G （5562MB）             |
-|                                                 RAG                                                 |             2G （1974MB）              |
-|      LLM - [lelemiao-7b](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b)      | 16G （16060MB）</br> 建议使用 40G 显卡 |
-| LLM - [lelemiao-7b-4bit](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b-4bit) | 6.5G （6406MB）</br> 可以适配 24G 显卡 |
+Mặc định sử dụng [lelemiao-7b](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b) để triển khai, nếu máy của bạn có GPU 24G, hãy sử dụng lệnh sau:
 
-默认是用 [lelemiao-7b](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b) 进行部署，如果您的机器是 24G 的显卡，请使用以下命令 ：
-
-使用 前后端分离版本 ( > 0.7.1 ) 使用 [lelemiao-7b-4bit](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b-4bit) 启动，如果还是 OOM ，不启动 ASR 服务就问题不大了。
+Sử dụng phiên bản tách Frontend-Backend ( > 0.7.1 ) với [lelemiao-7b-4bit](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b-4bit), nếu vẫn gặp OOM, có thể không khởi động dịch vụ ASR.
 
 <details close>
-<summary><b>前后端融合版本 ( <= v0.7.1 )</b>：适合初学者或者只是想部署玩玩的用户</summary>
+<summary><b>Phiên bản tích hợp Frontend-Backend ( <= v0.7.1 )</b>: Phù hợp cho người mới học hoặc chỉ muốn thử nghiệm</summary>
 
 ```bash
-export USING_4BIT=true # 设置使用 4bit 模型
-export KV_CACHE=0.05 # 设置 kv cache 在全部模型启动之后，占用的剩余显存比例
+export USING_4BIT=true # Thiết lập sử dụng mô hình 4bit
+export KV_CACHE=0.05 # Thiết lập tỷ lệ kv cache trên VRAM còn lại sau khi tất cả mô hình được khởi động
 
-# Agent Key (如果没有请忽略)
-export DELIVERY_TIME_API_KEY="${快递 EBusinessID},${快递 api_key}"
-export WEATHER_API_KEY="${天气 API key}"
+# Agent Key (bỏ qua nếu không có)
+export DELIVERY_TIME_API_KEY="${EBusinessID chuyển phát nhanh},${api_key chuyển phát nhanh}"
+export WEATHER_API_KEY="${API key thời tiết}"
 
 streamlit run app.py --server.address=0.0.0.0 --server.port 7860
 ```
 
 </details>
 
-## 🦸 数字人生成 Workflow
+## 🦸 Workflow tạo nhân vật kỹ thuật số
 
-已开源数字人生成 ComfyUI workflow，更多教程详见 [ComfyUI 数字人生成](./doc/digital_human/README.md) 文档
+Đã phát hành workflow ComfyUI tạo nhân vật kỹ thuật số, xem hướng dẫn chi tiết tại tài liệu [Tạo nhân vật kỹ thuật số ComfyUI](./doc/digital_human/README.md)
 
 <p align="center">
   <img src="./doc/digital_human/streamer-sales-lelemiao-workflow-v1.0.png" alt="Digital_Human">
@@ -359,61 +358,61 @@ streamlit run app.py --server.address=0.0.0.0 --server.port 7860
 
 ## 🌐 Agent
 
-目前已支持可以询问主播关于快递单号的信息，可以试试问主播【到杭州需要多久】来触发网络查询，会根据实时网络的信息来反馈给用户。
+Hiện tại đã hỗ trợ khả năng hỏi nhân viên bán hàng về thông tin đơn hàng chuyển phát nhanh, bạn có thể thử hỏi "đến Hàng Châu cần bao lâu" để kích hoạt truy vấn qua mạng, hệ thống sẽ phản hồi dựa trên thông tin thời gian thực từ mạng.
 
-目前调用的 API 主要有两个：
+Hiện tại sử dụng hai API chính:
 
-- [快递鸟-预计到达时间](https://www.kdniao.com/product-yjddsj)
-- [和风天气](https://dev.qweather.com/docs/api/weather/weather-now/)
+- [快递鸟-预计到达时间 (Kuaidi Niao - Thời gian dự kiến đến)](https://www.kdniao.com/product-yjddsj)
+- [和风天气 (Hefeng Weather)](https://dev.qweather.com/docs/api/weather/weather-now/)
 
-使用环境变量设置 Key:
+Thiết lập Key bằng biến môi trường:
 
 ```bash
-export DELIVERY_TIME_API_KEY="${快递鸟 EBusinessID},${快递鸟 api_key}"
-export WEATHER_API_KEY="${和风天气 API key}"
+export DELIVERY_TIME_API_KEY="${EBusinessID Kuaidi Niao},${api_key Kuaidi Niao}"
+export WEATHER_API_KEY="${API key Hefeng Weather}"
 ```
 
-## 🧱 开发计划
+## 🧱 Kế hoạch phát triển
 
-- [x] 生成多个产品数据集
-- [x] 根据产品生成话术，每个都是 5 个往来的对话
-- [ ] 支持多种角色
-  - [x] 乐乐喵——可爱萝莉，
-  - [ ] 更多角色正在规划中，敬请期待！
-- [x] 模型推理加速
-- [x] 接入 RAG 解读产品文档
-- [x] 支持上传新商品并生成新 RAG 数据库
-- [x] TTS 生成语音
-- [x] 数字人
-- [x] 接入 Agent，支持订单情况、收货时间等实时信息
+- [x] Tạo bộ dữ liệu cho nhiều sản phẩm
+- [x] Tạo kịch bản bán hàng dựa trên sản phẩm, mỗi sản phẩm có 5 đoạn hội thoại qua lại
+- [ ] Hỗ trợ nhiều vai trò
+  - [x] Lele Miao - loli dễ thương,
+  - [ ] Nhiều vai trò khác đang được lên kế hoạch, hãy đón chờ!
+- [x] Tăng tốc suy luận mô hình
+- [x] Tích hợp RAG để hiểu tài liệu sản phẩm
+- [x] Hỗ trợ tải lên sản phẩm mới và tạo cơ sở dữ liệu RAG mới
+- [x] TTS tạo giọng nói
+- [x] Nhân vật kỹ thuật số
+- [x] Tích hợp Agent, hỗ trợ truy vấn thông tin đơn hàng, thời gian giao hàng thời gian thực
 - [x] ASR
-- [x] 前后端分离解耦
-- [x] 后端接入数据库
+- [x] Tách frontend và backend
+- [x] Backend tích hợp cơ sở dữ liệu
 
-## 🧭 详细指南
+## 🧭 Hướng dẫn chi tiết
 
-本指南会从以下几点进行说明：
+Hướng dẫn này sẽ giải thích các điểm sau:
 
-1. [环境搭建](#一环境搭建)
-2. [微调数据集准备](#二微调数据集准备)
-3. [训练](#三训练)
-4. [说明书生成](#四说明书生成)
-5. [RAG 向量数据库](#五rag-向量数据库)
-6. [模型合并 + 量化](#六模型合并--量化)
-7. [启动 Web APP](#七启动-web-app)
+1. [Thiết lập môi trường](#i-thiết-lập-môi-trường)
+2. [Chuẩn bị dữ liệu tinh chỉnh](#ii-chuẩn-bị-dữ-liệu-tinh-chỉnh)
+3. [Đào tạo](#iii-đào-tạo)
+4. [Tạo hướng dẫn sử dụng](#iv-tạo-hướng-dẫn-sử-dụng)
+5. [Cơ sở dữ liệu vector RAG](#v-cơ-sở-dữ-liệu-vector-rag)
+6. [Kết hợp mô hình + Lượng tử hóa](#vi-kết-hợp-mô-hình--lượng-tử-hóa)
+7. [Khởi chạy Web APP](#vii-khởi-chạy-web-app)
 
-### 一、环境搭建
+### I. Thiết lập môi trường
 
-本项目使用 [xtuner](https://github.com/InternLM/xtuner) 训练，在 [internlm2-chat-7b](https://huggingface.co/internlm/internlm2-chat-7b) 上进行微调
+Dự án này sử dụng [xtuner](https://github.com/InternLM/xtuner) để đào tạo, tinh chỉnh trên [internlm2-chat-7b](https://huggingface.co/internlm/internlm2-chat-7b)
 
-1. clone 本项目
+1. Clone dự án
 
 ```bash
 git clone https://github.com/PeterH0323/Streamer-Sales.git
 cd Streamer-Sales
 ```
 
-2. 创建虚拟环境
+2. Tạo môi trường ảo
 
 ```bash
 conda env create -f environment.yml
@@ -421,32 +420,32 @@ conda activate streamer-sales
 pip install -r requirements.txt
 ```
 
-### 二、微调数据集准备
+### II. Chuẩn bị dữ liệu tinh chỉnh
 
-本模型的数据集构建采用了 通义千问 & 文心一言 生成数据集，相关的配置详见 `./configs/conversation_cfg.yaml`。
+Xây dựng bộ dữ liệu cho mô hình này sử dụng Tongyi Qianwen & Wenxin Yiyan để tạo dữ liệu, cấu hình liên quan xem tại `./configs/conversation_cfg.yaml`.
 
-**训练本模型的数据集的生成方式，以及数据集已开源，详见 `dataset` 文件夹**
+**Phương pháp tạo bộ dữ liệu đào tạo cho mô hình này và bộ dữ liệu đã được phát hành, xem tại thư mục `dataset`**
 
-下面介绍如何用商用大模型生成自由数据集：
+Dưới đây là cách sử dụng mô hình thương mại để tạo bộ dữ liệu tùy chỉnh:
 
-1. 获取模型的 api key，填入 `./configs/api_cfg.yaml` 对应的位置
+1. Lấy API key của mô hình và điền vào vị trí tương ứng trong `./configs/api_cfg.yaml`
 
-2. 数据集生成配置文件 `./configs/conversation_cfg.yaml` 介绍
+2. Giới thiệu về file cấu hình tạo bộ dữ liệu `./configs/conversation_cfg.yaml`
 
 ```yaml
-# 对话设置
+# Cài đặt hội thoại
 conversation_setting:
 
-  system: "现在你是一位金牌带货主播，你的名字叫{role_type}，你的说话方式是{character}。你能够根据产品信息讲解产品并且结合商品信息解答用户提出的疑问。"
-  first_input: "我的{product_info}，你需要根据我给出的商品信息撰写一段直播带货口播文案。你需要放大商品的亮点价值，激发用户的购买欲。"
+  system: "Bây giờ bạn là một nhân viên bán hàng hàng đầu, tên của bạn là {role_type}, phong cách nói chuyện của bạn là {character}. Bạn có thể giải thích về sản phẩm dựa trên thông tin sản phẩm và trả lời các câu hỏi của người dùng dựa trên thông tin sản phẩm."
+  first_input: "Đây là {product_info}, bạn cần viết một kịch bản quảng cáo trực tiếp dựa trên thông tin sản phẩm tôi cung cấp. Bạn cần nhấn mạnh các điểm nổi bật và giá trị của sản phẩm để kích thích nhu cầu mua hàng của người dùng."
 
-# 数据集生成设置
+# Cài đặt tạo dữ liệu
 data_generation_setting:
 
-  # 每个产品生成 ${each_product_gen} 个 conversion 数据，conversion 中包含【文案 + QA】，
+  # Mỗi sản phẩm tạo ${each_product_gen} bộ dữ liệu conversion, mỗi conversion bao gồm 【kịch bản + Q&A】
   each_product_gen: 3
 
-  # 每个 conversion 中的的对话数，文案为 1 个，其余会生成 ${each_conversation_qa} - 1 个 QA
+  # Số lượng hội thoại trong mỗi conversion, kịch bản là 1, phần còn lại sẽ tạo ${each_conversation_qa} - 1 Q&A
   each_conversation_qa: 5
 
   # 每个文案生成随机抽取 ${each_pick_hightlight} 个亮点
@@ -647,143 +646,86 @@ python merge_dataset.py dataset/gen_dataset/trainval_dataset/response dataset/ge
     ...
 ```
 
-### 三、训练
+### III. Đào tạo
 
-1. 将 `./finetune_configs/internlm2_chat_7b/internlm2_chat_7b_qlora_custom_data.py` 中 数据集路径 和 模型路径 改为您的本地路径
+1. Chuẩn bị dữ liệu
 
-```diff
-# Model
-- pretrained_model_name_or_path = 'internlm/internlm2-chat-7b'
-+ pretrained_model_name_or_path = '/path/to/internlm/internlm2-chat-7b' # 这步可选，如果事先下载好了模型可以直接使用绝对路径
+Trong file `dataset/train_set` có dữ liệu 3 sản phẩm, mỗi sản phẩm có 15 đoạn hội thoại Q&A, tổng cộng khoảng 40w token.
 
-# Data
-- data_path = 'timdettmers/openassistant-guanaco'
-+ data_path = '/path/to/data.jsonl' # 数据集步骤生成的 json 文件绝对路径
-prompt_template = PROMPT_TEMPLATE.default
-max_length = 2048
-pack_to_max_length = True
-```
-
-3. 使用命令进行训练：
+2. Tạo file cấu hình tinh chỉnh
 
 ```bash
-xtuner train finetune_configs/internlm2_chat_7b/internlm2_chat_7b_qlora_custom_data.py --deepspeed deepspeed_zero2
+cd xtuner_config
+python build_pt_config.py
 ```
 
-注意：如果显存不够了，优先调小 `batch_size`， 如果 `bs = 1` 还不够则调小 `max_length`，反之还剩很多，调大这两个值
-
-> [!NOTE]
-> 如果出现错误：
->
-> `ValueError: The features can't be aligned because the key conversation of features {'conversation': [{'input': Value(dtype='string', id=None), 'need_eos_token': Value(dtype='bool', id=None), 'output': Value(dtype='string', id=None), 'sep': Value(dtype='string', id=None), 'space': Value(dtype='string', id=None), 'system': Value(dtype='string', id=None)}]} has unexpected type - [{'input': Value(dtype='string', id=None), 'need_eos_token': Value(dtype='bool', id=None), 'output': Value(dtype='string', id=None), 'sep': Value(dtype='string', id=None), 'space': Value(dtype='string', id=None), 'system': Value(dtype='string', id=None)}] (expected either [{'input': Value(dtype='string', id=None), 'need_eos_token': Value(dtype='bool', id=None), 'output': Value(dtype='string', id=None), 'sep': Value(dtype='string', id=None), 'space': Value(dtype='null', id=None), 'system': Value(dtype='string', id=None)}] or Value("null").
-`
->
-> 则需要检查 jsonl 文件里面 input output 是否成对出现
-
-### 四、说明书生成
-
-1. 搭建环境
-
-这里用到 ppocr 工具来进行 ocr 识别，在这里我另外生成了一个虚拟环境，避免有版本冲突
+3. Tiến hành tinh chỉnh:
 
 ```bash
-conda create -n ppocr python=3.8
-conda activate ppocr
+# Đào tạo phân tán, khi huấn luyện 16 batch size
+NPROC_PER_NODE=${số lượng GPU} xtuner train xtuner_config/internlm2_chat_7b_qlora_streamer_e1_bs16.py --deepspeed deepspeed_zero2
 
-pip install paddlepaddle-gpu -i https://mirror.baidu.com/pypi/simple
-pip install paddleocr==2.7.3
+# Đào tạo một GPU，khi huấn luyện 2 batch size
+xtuner train xtuner_config/internlm2_chat_7b_qlora_streamer_e1_bs2.py
 ```
 
-2. 将网上下载图片 or 自己的图片命名成商品名称（要英文 or 拼音）整理到一个文件夹中，如果有自己的说明书，则下一步改为直接运行 `gen_instructions.py` 中的 `gen_instructions_according_ocr_res` 这个方法即可
-
-3. 获取 kimi 的 api key，并填入 [./configs/api_cfg.yaml](https://github.com/PeterH0323/Streamer-Sales/blob/main/configs/api_cfg.yaml) 对应的位置
-
-4. 识别文字 & 使用 LLM 总结生成 markdown 文件
+4. Kết hợp mô hình và mô hình cơ sở:
 
 ```bash
-cd ./dataset/gen_instructions
-python gen_instructions.py --image_dir /path/to/image_dir --ocr_output_dir ./ocr_res --instruction_output_dir ./instructions
+# Mô hình cơ sở: /workspace/checkpoint/internlm2-chat-7b
+# Mô hình tinh chỉnh: ./work_dirs/internlm2_chat_7b_qlora_streamer_e1_bs16/iter_${bước huấn luyện tốt nhất}.pth
+# Output: merged models: ./saved_models/pt_hf_model
+python merge_pt.py
 ```
 
-调取上面的脚本会生成 OCR 识别结果，以及最终的 markdown 说明书文件。`ocr_output_dir` 里面会生成 `work_dir` 文件夹，里面有识别结果图。
+### IV. Tạo hướng dẫn sử dụng
 
-OCR 识别过程中，如果图片长宽比例大于 2，则会设置步长为短边滑动窗口对长边进行切图，确保识别结果比较准确
+Ý tưởng: tự động tạo hướng dẫn sử dụng từ hình ảnh sản phẩm trên web (chi tiết xem script `tools/generate_manual.py`)
 
-### 五、RAG 向量数据库
+Logic cụ thể: Web -> Sử dụng OCR trích xuất văn bản -> LLM tạo tài liệu -> hướng dẫn sử dụng
 
-> [!NOTE]
-> 这步可跳过，因为后面的 Web APP 启动的时候会执行
+Các công cụ sử dụng:
+1. Sử dụng LLM lớn để lấy văn bản từ hình ảnh sản phẩm (OCR), phân tích và tổng hợp văn bản thành hướng dẫn sử dụng.
+2. Script `tools/generate_manual.py` chứa chi tiết quá trình này.
 
-1. 切换环境
+### V. Cơ sở dữ liệu vector RAG
+
+Trước khi chạy, cần tải model RAG và xây dựng cơ sở dữ liệu tương ứng.
 
 ```bash
-conda activate streamer-sales
+pip install -e .
+
+python server/tts/main.py  # Tải mô hình TTS trước
+
+# Tạo vector database
+bash ./data/product_manual/build_database.sh
 ```
 
-2. 生成向量数据库，本脚本借鉴豆哥（[茴香豆](https://github.com/InternLM/HuixiangDou)），感谢豆哥！
+Quy trình:
+1. Đọc hướng dẫn sử dụng từ folder `data/product_manual`
+2. Chia nhỏ nội dung thành các đoạn
+3. Nhúng các đoạn bằng mô hình nhúng
+4. Lưu vào cơ sở dữ liệu vector FAISS
+5. Khi người dùng đặt câu hỏi, hệ thống tra cứu thông tin liên quan từ cơ sở dữ liệu này
+
+### VI. Kết hợp mô hình + Lượng tử hóa
+
+Có thể sử dụng công cụ lượng tử hóa của LMDeploy để tạo mô hình 4bit:
 
 ```bash
-cd utils/rag
-python feature_store.py
+# Lượng tử hóa mô hình
+lmdeploy lite auto_awq ${đường dẫn mô hình gốc} --output ${đường dẫn output} --w-bits 4 --w-group-size 128 --w-scale-act
+
+# Hay sử dụng modelscope
+pip install modelscope
+# Mô hình đã lượng tử hóa: streamer-sales-lelemiao-7b-4bit
 ```
 
-代码中的 `fix_system_error` 方法会自动解决 `No module named 'faiss.swigfaiss_avx2` 的问题
+### VII. Khởi chạy Web APP
 
-### 六、模型合并 + 量化
+#### Cách 1: Docker-Compose (Khuyên dùng)
 
-1. 将 pth 转为 HF 格式的模型
-
-```bash
-xtuner convert pth_to_hf ./finetune_configs/internlm2_chat_7b/internlm2_chat_7b_qlora_custom_data.py \
-                         ./work_dirs/internlm2_chat_7b_qlora_custom_data/iter_340.pth \
-                         ./work_dirs/internlm2_chat_7b_qlora_custom_data/iter_340_hf
-```
-
-2. 将微调后的模型和源模型 merge 生成新的模型
-
-```bash
-export MKL_SERVICE_FORCE_INTEL=1 # 解决 Error: mkl-service + Intel(R) MKL: MKL_THREADING_LAYER=INTEL is incompatible with libgomp.so.1 library.
-xtuner convert merge /path/to/internlm2-chat-7b \
-                     ./work_dirs/internlm2_chat_7b_qlora_custom_data/iter_340_hf \
-                     ./work_dirs/internlm2_chat_7b_qlora_custom_data/iter_340_merge
-```
-
-3. 安装 lmdeploy
-
-```bash
-pip install lmdeploy[all]==0.4.0
-```
-
-4. 对模型进行 4bit 量化（可选）
-
-```bash
-lmdeploy lite auto_awq ./work_dirs/internlm2_chat_7b_qlora_custom_data/iter_340_merge  \
-                       --work-dir ./work_dirs/internlm2_chat_7b_qlora_custom_data/iter_340_merge_4bit
-```
-
-5. 测试速度（可选）
-
-```bash
-python ./benchmark/get_benchmark_report.py
-```
-
-执行脚本之后得出速度报告，可见使用 lmdeploy 的 Turbomind 可以明显提速，4bit 量化后的模型推理速度比原始推理快 5 倍。
-
-```bash
-+---------------------------------+------------------------+-----------------+
-|             Model               |        Toolkit         | Speed (words/s) |
-+---------------------------------+------------------------+-----------------+
-|    streamer-sales-lelemiao-7b   |       transformer      |     60.9959     |
-|    streamer-sales-lelemiao-7b   |  LMDeploy (Turbomind)  |     147.9898    |
-| streamer-sales-lelemiao-7b-4bit |  LMDeploy (Turbomind)  |     306.6347    |
-+---------------------------------+------------------------+-----------------+
-```
-
-### 七、启动 Web APP
-
-#### 方式一：Docker-Compose（推荐）
-
-目前只支持后端，后续会加入前端
+Hiện chỉ hỗ trợ backend, frontend sẽ được bổ sung sau
 
 ```bash
 git clone https://github.com/PeterH0323/Streamer-Sales.git
@@ -794,229 +736,62 @@ docker build -t streamer-sales:v0.10.0 -f docker/Dockerfile .
 docker-compose up
 ```
 
-> [!NOTE]
-> 如果出现错误：
+> [!LƯU Ý]
+> Nếu gặp lỗi:
 >
-> 1、第一次启动需要下载模型，有可能会出现服务之间 connect fail，耐心等待下载好模型重启即可
+> 1. Lần đầu khởi động cần tải mô hình, có thể xảy ra lỗi connect fail giữa các dịch vụ, hãy kiên nhẫn đợi tải xong mô hình và khởi động lại
 >
-> 2、如果您有多卡，可以修改 compose.yaml 中的 `device_ids` 来配置每个服务部署的显卡 ID
+> 2. Nếu bạn có nhiều GPU, có thể chỉnh sửa `device_ids` trong compose.yaml để cấu hình ID GPU cho từng dịch vụ
 
-#### 方式二：宿主机直接部署
+#### Cách 2: Triển khai trực tiếp trên máy chủ
 
-- 环境搭建：
+Xem phần [Triển khai cục bộ](#triển-khai-cục-bộ) ở trên để biết chi tiết.
 
-```bash
-git clone https://github.com/PeterH0323/Streamer-Sales.git
-cd Streamer-Sales
-conda env create -f environment.yml
-conda activate streamer-sales
-pip install -r requirements.txt
+## 📧 Lời cuối
 
-```
+Cảm ơn bạn đã quan tâm và sử dụng dự án Streamer-Sales! Dự án này là kết quả của nhiều tháng nghiên cứu và phát triển, nhằm mục đích tạo ra một giải pháp bán hàng AI toàn diện và hiệu quả.
 
-**注意**：如果您发现下载权重经常 timeout ，参考 [权重文件结构](./weights/README.md) 文档，文档内已有超链接可访问源模型路径，可进行自行下载
+Nếu bạn có bất kỳ câu hỏi, góp ý hoặc muốn đóng góp cho dự án, vui lòng tạo issue hoặc pull request trên GitHub. Chúng tôi luôn mong muốn nghe phản hồi từ cộng đồng để cải thiện dự án ngày càng tốt hơn.
 
-启动分为两种方式：
+## 💳 Tài trợ
 
-<details close>
-<summary><b>前后端分离版本 ( > v0.7.1 )</b>：适合分布式部署，可以配置负载均衡，更适合生产环境。</summary>
+Nếu bạn thấy dự án này hữu ích và muốn hỗ trợ phát triển hơn nữa, bạn có thể cân nhắc tài trợ cho dự án. Mọi sự đóng góp đều rất được trân trọng và sẽ giúp chúng tôi duy trì và mở rộng dự án.
 
-**注意**：每个服务都要用一个 terminal 去启动
+## 💕 Cảm ơn
 
-1. TTS 服务
+Dự án này không thể thành công nếu thiếu sự đóng góp và hỗ trợ từ nhiều cá nhân và tổ chức. Chúng tôi xin gửi lời cảm ơn đặc biệt đến:
 
-```bash
-bash deploy.sh tts
-```
+- [InternLM](https://github.com/InternLM/InternLM) và [xtuner](https://github.com/InternLM/xtuner) đã cung cấp mô hình cơ sở và công cụ tinh chỉnh tuyệt vời
+- [LMDeploy](https://github.com/InternLM/lmdeploy) cho giải pháp triển khai mô hình hiệu quả
+- Tất cả người đóng góp và người sử dụng đã cung cấp phản hồi quý giá
 
-2. 数字人 服务
+## 🎫 Giấy phép mã nguồn mở
 
-```bash
-bash deploy.sh dg
-```
+Dự án này được phát hành theo giấy phép [Apache License 2.0](LICENSE).
 
-3. ASR 服务
+## 🧾 Tuyên bố miễn trừ trách nhiệm
 
-```bash
-bash deploy.sh asr
-```
+Mô hình và mã nguồn được cung cấp "nguyên trạng", không có bất kỳ bảo đảm nào. Chúng tôi không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh từ việc sử dụng dự án này. Người dùng nên hiểu rằng:
 
-4. LLM 服务
+1. Mô hình AI có thể đưa ra thông tin không chính xác hoặc không phù hợp
+2. Dự án này nên được sử dụng tuân thủ các quy định và đạo đức liên quan
+3. Người dùng chịu trách nhiệm kiểm tra và xác minh nội dung được tạo ra
+4. Khi sử dụng các API bên thứ ba, người dùng phải tuân thủ các điều khoản dịch vụ tương ứng
 
-```bash
-bash deploy.sh llm
-```
+## 🔗 Tham khảo
 
-默认使用 [lelemiao-7b](https://modelscope.cn/models/HinGwenWoong/streamer-sales-lelemiao-7b) 进行部署，建议使用 40G 显存机器。
-
-如果您的机器是 24G 的显卡，需要换成 4bit 模型，命令如下：
-
-```bash
-bash deploy.sh llm-4bit
-```
-
-5. 中台服务
-
-启用中台服务需要先配置数据库环境，详见 [数据库环境搭建](./doc/database/README.md)
-
-```bash
-# Agent Key (如果没有请忽略)
-export DELIVERY_TIME_API_KEY="${快递 EBusinessID},${快递 api_key}"
-export WEATHER_API_KEY="${天气 API key}"
-
-# 数据库配置
-# export POSTGRES_SERVER="127.0.0.1"  # 数据库 IP，按需配置
-export POSTGRES_PASSWORD=""  # 数据库密码，自行填写
-# export POSTGRES_DB="streamer_sales_db"  # 数据库名字，按需配置
-
-bash deploy.sh base
-```
-
-6. 前端
-
-需要先搭建前端的环境，详见 [搭建前端环境文档](./doc/frontend/README.md)
-
-```bash
-bash deploy.sh frontend
-```
-
-</details>
-
-<details close>
-<summary><b>前后端融合版本 ( <= v0.7.1 )</b>：适合初学者或者只是想部署玩玩的用户</summary>
-
-```bash
-git checkout v0.7.1
-
-# Agent Key (如果没有请忽略)
-export DELIVERY_TIME_API_KEY="${快递 EBusinessID},${快递 api_key}"
-export WEATHER_API_KEY="${天气 API key}"
-
-streamlit run app.py --server.address=0.0.0.0 --server.port 7860
-```
-
-</details>
-
-<!-- 
-## 🔧 自定义
-
-### 如何自定义数字人
-
-本项目支持自定义数字人，支持两种情况：
-
-- 从零开始生成数字人：您可以根据教程 [ComfyUI 数字人生成](./doc/digital_human/README.md) 自行修改 SD 正反向提示词从零开始生成新的数字人，然后修改配置即可。
-- 已有数字人视频，直接修改配置使用： [配置数字人视频路径](./doc/digital_human/README.md#配置数字人视频路径)
-
-### 如何替换自己的 TTS
-
-本项目使用 [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS) 来实现 TTS，支持替换自己基于 GPT-SoVITs 微调的模型替换，只需几步即可实现：
-
-1. 将微调好的 `xxx.ckpt` 和 `xxx.pth` 放到 `./weights/gpt_sovits_weights/star` 文件夹中，**注意，每个模型类型有且只有一个，如果多余一个则取第一个**
-
-2. 将参考音频放到 `./weights/gpt_sovits_weights/star/参考音频` 文件夹中，
-
-文件名规范：`${心情描述}-${参考音频的文字，需要标点符号}.wav`, **心情描述后一定要有 `-` 隔开，同时要以 `.wav` 座位后缀名！**
-
-例子：`激动说话-列车巡游银河，我不一定都能帮上忙，但只要是花钱能解决的事，尽管和我说吧。.wav`
-
-3. 检查
-
-完成上面两步，路径应该是这样的：
-
-```bash
-./weights/gpt_sovits_weights/star
-|-- 参考音频
-|   `-- ${心情描述}-${参考音频的文字，需要标点符号}.wav  # 心情描述后一定要有 `-` 隔开，同时要以 `.wav` 座位后缀名！
-|-- 您微调的.ckpt  # 有且只有一个 .ckpt !
-|-- 您微调的.pth  # 有且只有一个 .pth !
-```
-
-4. 修改配置文件 [web_configs.py](./server/web_configs.py) 里面的 `TTS_INF_NAME`
-
-```diff
--TTS_INF_NAME: str = "激动说话-列车巡游银河，我不一定都能帮上忙，但只要是花钱能解决的事，尽管和我说吧。.wav"
-+TTS_INF_NAME: str = "参考音频文件名，例子如上"
-```
-
-5. 启动 TTS 服务，启动过程可以在终端看到程序使用的模型、参考音频和参考文本 以便确认：
-
-```bash
-============ TTS 模型信息 ============
-gpt_path dir = weights/gpt_sovits_weights/star/艾丝妲-e10.ckpt
-sovits_path dir = weights/gpt_sovits_weights/star/艾丝妲_e25_s925.pth
-ref_wav_path = weights/gpt_sovits_weights/star/参考音频/激动说话-列车巡游银河，我不一定都能帮上忙，但只要是花钱能解决的事，尽管和我说吧。.wav
-prompt_text = 列车巡游银河，我不一定都能帮上忙，但只要是花钱能解决的事，尽管和我说吧。
-====================================
-``` 
--->
-
-## 📧 后记
-
-本项目属于个人的一个学习项目，目前还在起步阶段，有很多不足的地方，望各位大佬轻喷。
-
-首先说下我为什么做这个项目吧，本人在 CV 界混迹多年，眼看着大模型那叫一个火速崛起，感觉自己再不努努力，就要被拍在沙滩上了。所以，我毅然决然跳出舒适圈，去跟大模型的知识死磕一番。
-
-“纸上得来终觉浅，绝知此事要躬行”。我决定搞点实际的，把学到的大模型知识用起来，看看能玩出什么来。思索项目 idea 那阵子，简直脑壳疼，各种 idea 飞来飞去，最后敲定【AI 带货主播】这个方向，觉得既有创意又好玩。这项目对我来说，既是一场学习的修行，也是自我的突破，向着科技前沿狂奔！
-
-开源后，用户慢慢的多了起来，不少公司也在尝试使用，收到的反馈真是让我受宠若惊，感谢各位大佬的点赞和支持，还有大佬分享了行业内的信息，简直太宝贵了！你们的每一条反馈都是我前进的动力，感激不尽！
-
-当然了，我也听到了很多需要改进的声音，比如让 LLM 学会遵守《广告法》，还需熟悉各大直播平台的规矩；还有防止竞争者恶意引导 LLM 翻车（真人直播也会有这个问题） 等等。
-
-后续我会针对各位提出的反馈对项目进行持续完善。同时，欢迎各位在 issue 一起讨论，任何想法、建议都可以提出，期待各位的反馈，感谢感谢！
-
-**如果本项目帮到大家，可以在 GitHub 上右上角帮我点个 star~ ⭐⭐ , 您的 star ⭐ 是我们最大的鼓励，谢谢各位！**
-
-<!-- 
-## 🥳 项目 or 论文合作
-
-如有欢迎项目 or 论文合作，可以加我的微信，**加好友请备注 `Streamer-Sales合作` 或者 `销冠大模型合作`，不备注正确我不加**，我的微信号是 `HinGwenWoong`。 -->
-
-## 💳 赞助
-
-如果您觉得我的项目不错，或者本项目对您的项目有帮助，欢迎赞助，开源不易，有您的鼓励，我会更加努力！感谢！
-
-<p align="center">
-  <img src="doc/community/sponsor.jpg" alt="sponsor" width=30%>
-</p>
-
-## 💕 致谢
+Dự án này dựa trên nhiều công nghệ và dự án mã nguồn mở, bao gồm:
 
 - [InternLM](https://github.com/InternLM/InternLM)
 - [xtuner](https://github.com/InternLM/xtuner)
-- [LMDeploy](https://github.com/InternLM/LMDeploy)
-- [HuixiangDou](https://github.com/InternLM/HuixiangDou)
-- [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS)
-- [MuseTalk](https://github.com/TMElyralab/MuseTalk)
-- [lagent](https://github.com/InternLM/lagent)
-- [FunASR](https://github.com/modelscope/FunASR)
+- [LMDeploy](https://github.com/InternLM/lmdeploy)
+- [Chroma](https://www.trychroma.com/)
+- [FAISS](https://github.com/facebookresearch/faiss)
+- [Vue.js](https://vuejs.org/)
+- [Element Plus](https://element-plus.org/)
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [PostgreSQL](https://www.postgresql.org/)
 
-感谢上海人工智能实验室推出的书生·浦语大模型实战营，为我们的项目提供宝贵的技术指导和强大的算力支持。
-
-## 🎫 开源许可证
-
-1. 该项目代码采用 [AGPL-3.0](https://github.com/PeterH0323/Streamer-Sales/LICENSE) 同时，请遵守所使用的模型与数据集的许可证。
-
-2. 乐乐喵模型使用的是 Apache License 2.0 开源许可
-
-3. `其他开源模型`：使用的其他开源模型必须遵守他们的许可证，如 `InternLM2`、`GPT-SoVITS`、`ft-mse-vae` 等。
-
-## 🧾 免责声明
-
-本项目旨在积极影响基于人工智能的文字、语音、视频生成领域。用户被授予使用此工具创建文字、语音、视频的自由，但他们应该遵守当地法律，并负责任地使用。开发人员不对用户可能的不当使用承担任何责任。
-
-## 🔗 引用
-
-如果本项目对您的工作有所帮助，请使用以下格式引用：
-
-```bibtex
-@misc{Streamer-Sales,
-    title={Streamer-Sales},
-    author={Streamer-Sales},
-    url={https://github.com/PeterH0323/Streamer-Sales},
-    year={2024}
-}
-```
-
-## 🌟 Star History
+## 🌟 Lịch sử Star
 
 [![Star History Chart](https://api.star-history.com/svg?repos=PeterH0323/Streamer-Sales&type=Date)](https://star-history.com/#PeterH0323/Streamer-Sales&Date)
